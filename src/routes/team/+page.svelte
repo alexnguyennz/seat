@@ -27,6 +27,11 @@
 	<link rel="preload" as="image" href="/team/clint-schoultz.png" />
 	<link rel="preload" as="image" href="/team/bradley-alford.png" />
 	<link rel="preload" as="image" href="/team/jessica-armstrong.png" />
+
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+	/>
 </svelte:head>
 
 <section class="space-y-5">
@@ -37,11 +42,11 @@
 			<div class="member">
 				<ul class="award">
 					<li>
-						<i class="fa-solid fa-award" />
+						<i class="ti ti-award-filled" />
 						<span>Masters of Business Administration - Innovation and Leadership</span>
 					</li>
 					<li>
-						<i class="fa-solid fa-award" />
+						<i class="ti ti-award-filled" />
 						<span>Masters of Hotel Management</span>
 					</li>
 				</ul>
