@@ -73,7 +73,6 @@
 							active={$page.url.pathname === '/team' || $page.url.pathname === '/gallery'}
 							><Chevron aligned>About</Chevron></NavLi
 						>
-						<!--<NavLi tabindex="0" id="nav-menu1" class="cursor-pointer transition" data-dropdown-trigger="hover" active={$page.url.pathname === '/team' || $page.url.pathname === '/gallery'}>About <i class="fa-sharp fa-solid fa-chevron-down"></i></NavLi>-->
 
 						<li>
 							<ul class="dropdown-content menu p-2 shadow bg-white rounded-box w-full md:w-52">

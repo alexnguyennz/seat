@@ -1,7 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 
-import Icons from 'unplugin-icons/vite';
-
 function VitePluginRemoveHashFontFiles() {
 	return {
 		name: 'Remove hash from font files',
@@ -19,13 +17,7 @@ function VitePluginRemoveHashFontFiles() {
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [
-		sveltekit(),
-		VitePluginRemoveHashFontFiles(),
-		Icons({
-			compiler: 'svelte'
-		})
-	],
+	plugins: [sveltekit(), VitePluginRemoveHashFontFiles()],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}

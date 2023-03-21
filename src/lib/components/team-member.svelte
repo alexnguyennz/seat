@@ -4,7 +4,7 @@
 		const arrow = document.getElementById(`${member}-arrow`);
 
 		more!.classList.toggle('toggle');
-		arrow!.classList.toggle('fa-arrow-up');
+		arrow!.classList.toggle('ti-arrow-up');
 	}
 
 	interface Member {
@@ -15,6 +15,13 @@
 
 	export let data: Member;
 </script>
+
+<svelte:head>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+	/>
+</svelte:head>
 
 <div>
 	<!-- Avatar -->
@@ -47,7 +54,7 @@
 
 		<div class="hr">
 			<button on:click={() => readMore(data.slug)}
-				><i id={`${data.slug}-arrow`} class="fa-solid fa-arrow-down" /></button
+				><i id={`${data.slug}-arrow`} class="ti ti-arrow-down" /></button
 			>
 		</div>
 	</div>
