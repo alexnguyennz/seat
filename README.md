@@ -1,4 +1,4 @@
-Blue Seat / Yellow Seat / Orange Seat / Green Seat are a local business offering services such as catering, cleaning and event management.
+Blue Seat / Yellow Seat / Orange Seat / Green Seat are a local set of businesses offering services such as catering, cleaning and event management.
 
 ### Main Tools
 
