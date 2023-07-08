@@ -1,5 +1,5 @@
-<script lang="ts">
-	import TeamMember from '$lib/components/team-member.svelte';
+<script>
+	import TeamMember from '$lib/components/routes/team/TeamMember.svelte';
 
 	let data = [
 		{

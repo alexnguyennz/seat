@@ -8,6 +8,6 @@ module.exports = {
 	theme: {
 		extend: {}
 	},
-	plugins: [require('daisyui'), require('flowbite/plugin')],
+	plugins: [require('flowbite/plugin')],
 	darkMode: 'class'
 };

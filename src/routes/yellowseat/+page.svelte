@@ -1,7 +1,7 @@
 <script>
 	import { Tabs, TabItem } from 'flowbite-svelte';
 
-	import Seat from '$lib/components/seat.svelte';
+	import Seat from '$lib/components/Seat.svelte';
 
 	const data = {
 		name: 'Yellow Seat',
@@ -18,7 +18,7 @@
 </svelte:head>
 
 <Seat {data}
-	><div class="space">
+	><div class="space-y-5">
 		<p>
 			At Yellow Seat we take the time to listen and guarantee that we are continuously providing
 			consistent food services that suits your needs. We strive for honest relationships which is
@@ -37,12 +37,12 @@
 			that you can focus on - running your business.
 		</p>
 
-		<h3 class="text-2xl font-bold mb-4">Great food and service brings people together.</h3>
-		<p class="text-xl mb-4">
+		<h3 class="mb-4 text-2xl font-bold">Great food and service brings people together.</h3>
+		<p class="mb-4 text-xl">
 			It starts with locally sourced ingrediency combined with our passion of food which allows us
 			to create food that is tasty, enjoyable, and nutritious.
 		</p>
-		<p class="text-xl mb-4">
+		<p class="mb-4 text-xl">
 			With Yellow Seats meals, you can tell the food was prepared with care and made specifically
 			for your students. Yellow Seat will ensure everyone who eats their meal isn't just enjoying
 			tasty food, but also getting vital nutrition at great value. Our team select local freshest
@@ -50,18 +50,32 @@
 			is diverse and students often have different needs. We are sensitive to lifestyle, cultural
 			and medical requirements and can offer delicious diary options.
 		</p>
-		<p class="text-xl mb-8">Contact us to discuss our pricing models.</p>
+		<p class="mb-8 text-xl">Contact us to discuss our pricing models.</p>
 		<p>
 			<a
 				href="/contact"
-				class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-xl px-8 py-3"
+				class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
 				>Get in touch</a
 			>
 		</p>
+
+		<div class="flex justify-center gap-5">
+			<a
+				href="/yellowseat/menus"
+				class="rounded-3xl bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
+				>Catering Menus</a
+			>
+
+			<a
+				href="/yellowseat/venues"
+				class="rounded-3xl bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
+				>Partner Venues</a
+			>
+		</div>
 	</div>
 
 	<div class="seat-tabs">
-		<Tabs style="full" defaultClass="flex gap-5" contentClass="p-4">
+		<Tabs style="full" defaultClass="flex gap-5" contentClass="pt-4">
 			<TabItem
 				class="w-full"
 				activeClasses="w-full p-3 bg-white rounded-md border border-b-4 border-black"

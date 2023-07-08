@@ -1,7 +1,7 @@
 <script>
 	import { Tabs, TabItem } from 'flowbite-svelte';
 
-	import Seat from '$lib/components/seat.svelte';
+	import Seat from '$lib/components/Seat.svelte';
 
 	const data = {
 		name: 'Orange Seat',
@@ -18,7 +18,7 @@
 </svelte:head>
 
 <Seat {data}
-	><div class="space">
+	><div class="space-y-5">
 		<p>
 			As Event and Catering specialists we offer and extensive range of hire equipment. We don't
 			only supply the nice bits that guests will see and use - our product range extends to cash
@@ -36,14 +36,14 @@
 		<p>
 			<a
 				href="/contact"
-				class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-xl px-8 py-3"
+				class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
 				>Get in touch</a
 			>
 		</p>
 	</div>
 
 	<div class="seat-tabs">
-		<Tabs style="full" contentClass="p-4">
+		<Tabs style="full" contentClass="pt-4">
 			<TabItem
 				class="w-full"
 				activeClasses="w-full p-3 bg-white rounded-md border border-b-4 border-black"

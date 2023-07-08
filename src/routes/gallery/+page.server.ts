@@ -5,8 +5,6 @@ import { images } from '../../lib/gallery/+server.js';
 
 import type { PageServerLoad } from './$types';
 
-export const prerender = false;
-
 cloudinary.config({
 	cloud_name: 'seat',
 	api_key: CLOUDINARY_API_KEY,
@@ -39,3 +37,5 @@ export const load: PageServerLoad = async () => {
 		return { images }; // return local images as backup if there is an API failure
 	}
 };
+
+export const prerender = false;

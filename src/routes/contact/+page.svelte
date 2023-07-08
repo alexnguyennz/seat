@@ -51,7 +51,7 @@
 			<div class="button-container">
 				<button
 					type="submit"
-					class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-xl px-8 py-3"
+					class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
 					>Send message</button
 				>
 			</div>
@@ -130,7 +130,7 @@
 
 	/* workaround for poor League Spartan spacing in select options */
 	select option {
-		font-family: Tahoma;
+		font-family: Tahoma, system-ui, sans-serif;
 	}
 
 	@media (min-width: 768px) {

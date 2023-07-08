@@ -1,6 +1,6 @@
 <script>
-	import SeatCard from '$lib/components/seat-card.svelte';
-	import ListItem from '$lib/components/list-item.svelte';
+	import SeatCard from '$lib/components/routes/index/SeatCard.svelte';
+	import ListItem from '$lib/components/routes/index/ListItem.svelte';
 
 	const seats = [
 		{
@@ -39,19 +39,18 @@
 	<link rel="preload" as="image" href="./greenseat.png" />
 </svelte:head>
 
-<section class="space-y-5 text-xl">
-	<div>
-		<h2 class="page-heading">Our services</h2>
+<section class="text-xl">
+	<div class="mb-16">
+		<h2 class="page-heading mb-4">Our services</h2>
+		<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+			{#each seats as seat}
+				<SeatCard data={seat} />
+			{/each}
+		</div>
 	</div>
 
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-		{#each seats as seat}
-			<SeatCard data={seat} />
-		{/each}
-	</div>
-
-	<div>
-		<h2 class="page-heading">Our social promises</h2>
+	<div class="mb-16">
+		<h2 class="page-heading mb-4">Our social promises</h2>
 
 		<ul>
 			<ListItem>Skills and a career path</ListItem>
@@ -66,12 +65,12 @@
 			<ListItem>Helping the next generation</ListItem>
 
 			<li>
-				<ul class="ml-20 list-disc">
+				<ul class="ml-20 list-disc space-y-2">
 					<li>
 						We support <a
 							href="https://vsctrust.org.nz/dosomegood"
 							target="_blank"
-							class="link link-hover"
+							class="animated-link"
 							rel="noreferrer">Do Some Good</a
 						> who bridges the gap between businesses and low decile schools
 					</li>
@@ -88,36 +87,38 @@
 		</ul>
 	</div>
 
-	<h2 class="page-heading">The story behind the name</h2>
+	<div>
+		<h2 class="page-heading mb-4">The story behind the name</h2>
 
-	<div class="grid md:grid-cols-2 gap-10">
-		<img
-			src="./name.webp"
-			alt="blue seats"
-			width="320"
-			height="207"
-			class="w-full mx-auto rounded-lg"
-		/>
+		<div class="grid gap-10 md:grid-cols-2">
+			<img
+				src="./name.webp"
+				alt="blue seats"
+				width="320"
+				height="207"
+				class="mx-auto w-full rounded-lg"
+			/>
 
-		<div class="space">
-			<p>
-				As a Melbourne boy Australian Football League is in Brad's blood. From the day he was born,
-				Brad has been a Carlton Football Club Member. His Grandfather and Mother were both lifetime
-				members as well.
-			</p>
+			<div class="space">
+				<p>
+					As a Melbourne boy, Australian Football League is in Brad's blood. From the day he was
+					born, Brad has been a Carlton Football Club Member. His Grandfather and Mother were both
+					lifetime members as well.
+				</p>
 
-			<p>
-				For every game, Brad and his mother would go to Princes Park and sit in the same blue seats,
-				Number 19 and Number 20. They sat in those seats for over 25 years. Brad's passion for
-				sports and live events began in those seats and helped determined his lifelong career path
-				in events.
-			</p>
+				<p>
+					For every game, Brad and his mother would go to Princes Park and sit in the same blue
+					seats, Number 19 and Number 20. They sat in those seats for over 25 years. Brad's passion
+					for sports and live events began in those seats and helped determined his lifelong career
+					path in events.
+				</p>
 
-			<p>
-				Blue Seat, Yellow Seat, Green Seat, and Orange Seat are a family run by event and management
-				professionals passionate about people, food, hospitality, and creating truly memorable
-				occasions.
-			</p>
+				<p>
+					Blue Seat, Yellow Seat, Green Seat, and Orange Seat are a family run by event and
+					management professionals passionate about people, food, hospitality, and creating truly
+					memorable occasions.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
