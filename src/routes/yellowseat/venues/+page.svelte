@@ -41,7 +41,7 @@
 	<div class="mb-16">
 		<h2 class="page-heading mb-4">Partner Venues</h2>
 
-		<div class="grid gap-10 md:grid-cols-2">
+		<div class="grid gap-8 md:grid-cols-2">
 			{#each venues as venue}
 				<Venue data={venue} />
 			{/each}
