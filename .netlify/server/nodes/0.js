@@ -1,9 +1,10 @@
 import * as universal from '../entries/pages/_layout.js';
 
 export const index = 0;
-export const component = async () => (await import('../entries/pages/_layout.svelte.js')).default;
-export const file = '_app/immutable/components/pages/_layout.svelte-16b07154.js';
+let component_cache;
+export const component = async () => component_cache ??= (await import('../entries/pages/_layout.svelte.js')).default;
 export { universal };
-export const imports = ["_app/immutable/components/pages/_layout.svelte-16b07154.js","_app/immutable/chunks/index-454711cb.js","_app/immutable/chunks/singletons-c97048f5.js","_app/immutable/chunks/index-3949387f.js","_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang-3c3a1caf.js","_app/immutable/modules/pages/_layout.js-8ebbb5d9.js","_app/immutable/chunks/_layout-1e7edd17.js"];
-export const stylesheets = ["_app/immutable/assets/_layout-b005bcf2.css","_app/immutable/assets/Indicator-1d121e74.css"];
+export const universal_id = "src/routes/+layout.js";
+export const imports = ["_app/immutable/nodes/0.47303e1a.js","_app/immutable/chunks/index.9cdf0179.js","_app/immutable/chunks/singletons.a690b0da.js","_app/immutable/chunks/index.1153a3ff.js","_app/immutable/chunks/Icon.00104651.js"];
+export const stylesheets = ["_app/immutable/assets/0.d53e141c.css"];
 export const fonts = [];

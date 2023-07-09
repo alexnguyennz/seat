@@ -1,13 +1,12 @@
-import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
-import "classnames";
-/* empty css                                                       */import { S as Seat, T as Tabs, a as TabItem } from "../../../chunks/seat.js";
+import { c as create_ssr_component, v as validate_component } from "../../../chunks/index2.js";
+/* empty css                                                       */import { S as Seat, T as Tabs, a as TabItem } from "../../../chunks/Seat.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const data = { name: "Yellow Seat", slug: "yellowseat" };
-  return `${$$result.head += `<!-- HEAD_svelte-h5q2_START -->${$$result.title = `<title>Yellow Seat</title>`, ""}<meta name="${"description"}" content="${"Yellow Seat"}"><link rel="${"preload"}" as="${"image"}" href="${"/yellowseat.png"}"><link rel="${"preload"}" as="${"image"}" href="${"/yellowseat/banner.jpg"}"><!-- HEAD_svelte-h5q2_END -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-h5q2_START -->${$$result.title = `<title>Yellow Seat</title>`, ""}<meta name="description" content="Yellow Seat"><link rel="preload" as="image" href="/yellowseat.png"><link rel="preload" as="image" href="/yellowseat/banner.jpg"><!-- HEAD_svelte-h5q2_END -->`, ""}
 
 ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
     default: () => {
-      return `<div class="${"space"}"><p>At Yellow Seat we take the time to listen and guarantee that we are continuously providing
+      return `<div class="space-y-5"><p>At Yellow Seat we take the time to listen and guarantee that we are continuously providing
 			consistent food services that suits your needs. We strive for honest relationships which is
 			built on trust and integrity. Food and service is our passion.
 		</p>
@@ -22,26 +21,30 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
 			that you can focus on - running your business.
 		</p>
 
-		<h3 class="${"text-2xl font-bold mb-4"}">Great food and service brings people together.</h3>
-		<p class="${"text-xl mb-4"}">It starts with locally sourced ingrediency combined with our passion of food which allows us
+		<h3 class="mb-4 text-2xl font-bold">Great food and service brings people together.</h3>
+		<p class="mb-4 text-xl">It starts with locally sourced ingrediency combined with our passion of food which allows us
 			to create food that is tasty, enjoyable, and nutritious.
 		</p>
-		<p class="${"text-xl mb-4"}">With Yellow Seats meals, you can tell the food was prepared with care and made specifically
+		<p class="mb-4 text-xl">With Yellow Seats meals, you can tell the food was prepared with care and made specifically
 			for your students. Yellow Seat will ensure everyone who eats their meal isn&#39;t just enjoying
 			tasty food, but also getting vital nutrition at great value. Our team select local freshest
 			ingredients to deliver dishes to delight, exactly how you want them. We understand our world
 			is diverse and students often have different needs. We are sensitive to lifestyle, cultural
 			and medical requirements and can offer delicious diary options.
 		</p>
-		<p class="${"text-xl mb-8"}">Contact us to discuss our pricing models.</p>
-		<p><a href="${"/contact"}" class="${"text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-xl px-8 py-3"}">Get in touch</a></p></div>
+		<p class="mb-8 text-xl">Contact us to discuss our pricing models.</p>
+		<p><a href="/contact" class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Get in touch</a></p>
 
-	<div class="${"seat-tabs"}">${validate_component(Tabs, "Tabs").$$render(
+		<div class="flex justify-center gap-5"><a href="/yellowseat/menus" class="rounded-3xl bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Catering Menus</a>
+
+			<a href="/yellowseat/venues" class="rounded-3xl bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Partner Venues</a></div></div>
+
+	<div class="seat-tabs">${validate_component(Tabs, "Tabs").$$render(
         $$result,
         {
           style: "full",
           defaultClass: "flex gap-5",
-          contentClass: "p-4"
+          contentClass: "pt-4"
         },
         {},
         {
@@ -57,13 +60,13 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
               {},
               {
                 title: () => {
-                  return `<span slot="${"title"}" class="${"tab-title"}">Cafés</span>`;
+                  return `<span slot="title" class="tab-title">Cafés</span>`;
                 },
                 default: () => {
-                  return `<div class="${"tab-grid"}"><img src="${"./yellowseat/cafe1.jpg"}" alt="${"Yellow Seat gallery 1"}" loading="${"lazy"}">
-					<div><img src="${"./yellowseat/cafe2.jpg"}" alt="${"Yellow Seat gallery 2"}" loading="${"lazy"}"></div>
-					<img src="${"./yellowseat/residence1.jpg"}" alt="${"Yellow Seat gallery 3"}" loading="${"lazy"}">
-					<img src="${"./yellowseat/residence2.jpg"}" alt="${"Yellow Seat gallery 4"}" loading="${"lazy"}"></div>`;
+                  return `<div class="tab-grid"><img src="./yellowseat/cafe1.jpg" alt="Yellow Seat gallery 1" loading="lazy">
+					<div><img src="./yellowseat/cafe2.jpg" alt="Yellow Seat gallery 2" loading="lazy"></div>
+					<img src="./yellowseat/residence1.jpg" alt="Yellow Seat gallery 3" loading="lazy">
+					<img src="./yellowseat/residence2.jpg" alt="Yellow Seat gallery 4" loading="lazy"></div>`;
                 }
               }
             )}
@@ -77,13 +80,13 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
               {},
               {
                 title: () => {
-                  return `<span slot="${"title"}" class="${"tab-title"}">Residence Halls &amp; Boarding Schools</span>`;
+                  return `<span slot="title" class="tab-title">Residence Halls &amp; Boarding Schools</span>`;
                 },
                 default: () => {
-                  return `<div class="${"tab-grid"}"><img src="${"./yellowseat/cafe1.jpg"}" alt="${"Yellow Seat gallery 1"}" loading="${"lazy"}">
-					<div><img src="${"./yellowseat/cafe2.jpg"}" alt="${"Yellow Seat gallery 2"}" loading="${"lazy"}"></div>
-					<img src="${"./yellowseat/residence1.jpg"}" alt="${"Yellow Seat gallery 3"}" loading="${"lazy"}">
-					<img src="${"./yellowseat/residence2.jpg"}" alt="${"Yellow Seat gallery 4"}" loading="${"lazy"}"></div>`;
+                  return `<div class="tab-grid"><img src="./yellowseat/cafe1.jpg" alt="Yellow Seat gallery 1" loading="lazy">
+					<div><img src="./yellowseat/cafe2.jpg" alt="Yellow Seat gallery 2" loading="lazy"></div>
+					<img src="./yellowseat/residence1.jpg" alt="Yellow Seat gallery 3" loading="lazy">
+					<img src="./yellowseat/residence2.jpg" alt="Yellow Seat gallery 4" loading="lazy"></div>`;
                 }
               }
             )}`;

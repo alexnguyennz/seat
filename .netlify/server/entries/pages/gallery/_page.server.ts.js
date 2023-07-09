@@ -2,7 +2,6 @@ import { v2 } from "cloudinary";
 import { i as images } from "../../../chunks/_server.js";
 const CLOUDINARY_API_KEY = "498986659595345";
 const CLOUDINARY_API_SECRET = "5U8yjGU1ucwyGPPrLuk961NhAlU";
-const prerender = false;
 v2.config({
   cloud_name: "seat",
   api_key: CLOUDINARY_API_KEY,
@@ -27,6 +26,7 @@ const load = async () => {
     return { images };
   }
 };
+const prerender = false;
 export {
   load,
   prerender

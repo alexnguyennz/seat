@@ -92,14 +92,14 @@
 
 		<div class="grid gap-10 md:grid-cols-2">
 			<img
-				src="./name.webp"
+				src="/name.webp"
 				alt="blue seats"
 				width="320"
 				height="207"
 				class="mx-auto w-full rounded-lg"
 			/>
 
-			<div class="space">
+			<div class="space-y-5">
 				<p>
 					As a Melbourne boy, Australian Football League is in Brad's blood. From the day he was
 					born, Brad has been a Carlton Football Club Member. His Grandfather and Mother were both

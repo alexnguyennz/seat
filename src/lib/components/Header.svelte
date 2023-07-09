@@ -42,7 +42,7 @@
 					>
 
 					<ul
-						class="invisible absolute z-10 mx-auto w-48 scale-75 space-y-2 rounded-md pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100"
+						class="invisible absolute z-10 mx-auto w-48 scale-75 space-y-2 rounded-md pb-6 pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100"
 					>
 						<li>
 							<a
@@ -75,7 +75,7 @@
 					>
 
 					<ul
-						class="invisible absolute z-10 mx-auto w-48 scale-75 space-y-2 rounded-md pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100"
+						class="invisible absolute z-10 mx-auto w-48 scale-75 space-y-2 rounded-md pb-6 pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100"
 					>
 						<li class:subactive={$page.url.pathname === '/team'}>
 							<a href="/team">Our team</a>

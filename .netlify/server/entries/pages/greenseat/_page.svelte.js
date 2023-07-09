@@ -1,15 +1,14 @@
-import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
-import "classnames";
+import { c as create_ssr_component, v as validate_component } from "../../../chunks/index2.js";
 import { C as Carousel } from "../../../chunks/Carousel.js";
-/* empty css                                                       */import { S as Seat, T as Tabs, a as TabItem } from "../../../chunks/seat.js";
+/* empty css                                                       */import { S as Seat, T as Tabs, a as TabItem } from "../../../chunks/Seat.js";
 import { g as greenseatPage } from "../../../chunks/_server.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const data = { name: "Green Seat", slug: "greenseat" };
-  return `${$$result.head += `<!-- HEAD_svelte-tnbk78_START -->${$$result.title = `<title>Green Seat</title>`, ""}<meta name="${"description"}" content="${"Green Seat"}"><link rel="${"preload"}" as="${"image"}" href="${"/greenseat.png"}"><link rel="${"preload"}" as="${"image"}" href="${"/greenseat/banner.jpg"}"><!-- HEAD_svelte-tnbk78_END -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-tnbk78_START -->${$$result.title = `<title>Green Seat</title>`, ""}<meta name="description" content="Green Seat"><link rel="preload" as="image" href="/greenseat.png"><link rel="preload" as="image" href="/greenseat/banner.jpg"><!-- HEAD_svelte-tnbk78_END -->`, ""}
 
 ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
     default: () => {
-      return `<div class="${"space"}"><p>At Green Seat we take the time to listen and guarantee that we are continuously providing
+      return `<div class="space-y-5"><p>At Green Seat we take the time to listen and guarantee that we are continuously providing
 			consistent cleaning services that suits your needs. We strive for honest relationships which
 			is built on trust and integrity. Service is our passion as we strive for excellence.
 		</p>
@@ -33,14 +32,14 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
 			free no obligation quote.
 		</p>
 
-		<p><a href="${"/contact"}" class="${"text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-xl px-8 py-3"}">Get in touch</a></p></div>
+		<p><a href="/contact" class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Get in touch</a></p></div>
 
-	<div class="${"seat-tabs"}">${validate_component(Tabs, "Tabs").$$render(
+	<div class="seat-tabs">${validate_component(Tabs, "Tabs").$$render(
         $$result,
         {
           style: "full",
           defaultClass: "flex gap-5",
-          contentClass: "p-4"
+          contentClass: "pt-4"
         },
         {},
         {
@@ -56,10 +55,10 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
               {},
               {
                 title: () => {
-                  return `<span slot="${"title"}" class="${"tab-title"}">Event and Catering Equipment</span>`;
+                  return `<span slot="title" class="tab-title">Event and Catering Equipment</span>`;
                 },
                 default: () => {
-                  return `<div class="${"tab-grid"}"><div class="${"space-y-10 "}">${validate_component(Carousel, "Carousel").$$render(
+                  return `<div class="tab-grid"><div class="space-y-10 ">${validate_component(Carousel, "Carousel").$$render(
                     $$result,
                     {
                       images: greenseatPage,
@@ -72,7 +71,7 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
                     {},
                     {}
                   )}</div>
-					<div><img src="${"./greenseat/3.jpg"}" alt="${"Green Seat gallery 1"}" loading="${"lazy"}"></div></div>`;
+					<div><img src="./greenseat/3.jpg" alt="Green Seat gallery 1" loading="lazy"></div></div>`;
                 }
               }
             )}`;

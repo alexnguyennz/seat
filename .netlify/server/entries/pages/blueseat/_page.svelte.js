@@ -1,13 +1,12 @@
-import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
-import "classnames";
-/* empty css                                                       */import { S as Seat, T as Tabs, a as TabItem } from "../../../chunks/seat.js";
+import { c as create_ssr_component, v as validate_component } from "../../../chunks/index2.js";
+/* empty css                                                       */import { S as Seat, T as Tabs, a as TabItem } from "../../../chunks/Seat.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const data = { name: "Blue Seat", slug: "blueseat" };
-  return `${$$result.head += `<!-- HEAD_svelte-1926hca_START -->${$$result.title = `<title>Blue Seat</title>`, ""}<meta name="${"description"}" content="${"Blue Seat"}"><link rel="${"preload"}" as="${"image"}" href="${"/blueseat.png"}"><link rel="${"preload"}" as="${"image"}" href="${"/blueseat/banner.jpg"}"><!-- HEAD_svelte-1926hca_END -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-1926hca_START -->${$$result.title = `<title>Blue Seat</title>`, ""}<meta name="description" content="Blue Seat"><link rel="preload" as="image" href="/blueseat.png"><link rel="preload" as="image" href="/blueseat/banner.jpg"><!-- HEAD_svelte-1926hca_END -->`, ""}
 
 ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
     default: () => {
-      return `<div class="${"space"}"><p>Blue Seat is passionate about running safe and successful events. We believe that food, safety
+      return `<div class="space-y-5"><p>Blue Seat is passionate about running safe and successful events. We believe that food, safety
 			and hospitality are key to the customer experience and draw on over 40 years of event
 			experience to be able to deliver event management, consultation or operational advice. We
 			thrive on building open and honest relationships, continual learning and transparency.
@@ -29,9 +28,9 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
 			take care to deliver excellent events and advice to each and every stakeholder.
 		</p>
 
-		<p><a href="${"/contact"}" class="${"text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-xl px-8 py-3"}">Get in touch</a></p></div>
+		<p><a href="/contact" class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Get in touch</a></p></div>
 
-	<div class="${"seat-tabs"}">${validate_component(Tabs, "Tabs").$$render($$result, { style: "full", contentClass: "p-4" }, {}, {
+	<div class="seat-tabs">${validate_component(Tabs, "Tabs").$$render($$result, { style: "full", contentClass: "pt-4" }, {}, {
         default: () => {
           return `${validate_component(TabItem, "TabItem").$$render(
             $$result,
@@ -44,13 +43,13 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
             {},
             {
               title: () => {
-                return `<span slot="${"title"}" class="${"tab-title"}">Event Management</span>`;
+                return `<span slot="title" class="tab-title">Event Management</span>`;
               },
               default: () => {
-                return `<div class="${"tab-grid"}"><img src="${"./blueseat/1.jpg"}" alt="${"Blue Seat gallery 1"}" loading="${"lazy"}">
-					<div><img src="${"./blueseat/2.jpg"}" alt="${"Blue Seat gallery 2"}" loading="${"lazy"}"></div>
-					<img src="${"./blueseat/3.jpg"}" alt="${"Blue Seat gallery 3"}" loading="${"lazy"}">
-					<img src="${"./blueseat/4.jpg"}" alt="${"Blue Seat gallery 4"}" loading="${"lazy"}"></div>`;
+                return `<div class="tab-grid"><img src="./blueseat/1.jpg" alt="Blue Seat gallery 1" loading="lazy">
+					<div><img src="./blueseat/2.jpg" alt="Blue Seat gallery 2" loading="lazy"></div>
+					<img src="./blueseat/3.jpg" alt="Blue Seat gallery 3" loading="lazy">
+					<img src="./blueseat/4.jpg" alt="Blue Seat gallery 4" loading="lazy"></div>`;
               }
             }
           )}`;
