@@ -12,11 +12,11 @@
 			{data.description}
 		</p>
 	</div>
-	<div class="mx-auto mt-auto px-6 pt-4 pb-2">
+	<div class="mx-auto mt-auto px-6 pb-2 pt-4">
 		<a
 			href={`/${data.slug}`}
-			class="mb-2 flex items-start gap-2 rounded-full bg-gray-600 px-4 pt-2 pb-1 text-lg font-semibold text-gray-100 transition hover:bg-gray-700"
-			>Learn More <IconArrowRight /></a
+			class="mb-2 flex items-start gap-2 rounded-full bg-gray-600 px-4 pb-1 pt-2 text-lg font-semibold text-gray-100 transition hover:bg-gray-700"
+			aria-label={`${data.name}'s page`}>Learn More <IconArrowRight /></a
 		>
 	</div>
 </div>
