@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, d as add_attribute, e as escape, f as each } from "../../chunks/index2.js";
+import { c as create_ssr_component, v as validate_component, f as add_attribute, e as escape, h as each } from "../../chunks/index.js";
 import { I as Icon } from "../../chunks/Icon.js";
 const IconArrowRight = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const iconNode = [
@@ -115,9 +115,9 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 	<div><h2 class="page-heading mb-4">The story behind the name</h2>
 
-		<div class="grid gap-10 md:grid-cols-2"><img src="./name.webp" alt="blue seats" width="320" height="207" class="mx-auto w-full rounded-lg">
+		<div class="grid gap-10 md:grid-cols-2"><img src="/name.webp" alt="blue seats" width="320" height="207" class="mx-auto w-full rounded-lg">
 
-			<div class="space"><p>As a Melbourne boy, Australian Football League is in Brad&#39;s blood. From the day he was
+			<div class="space-y-5"><p>As a Melbourne boy, Australian Football League is in Brad&#39;s blood. From the day he was
 					born, Brad has been a Carlton Football Club Member. His Grandfather and Mother were both
 					lifetime members as well.
 				</p>

@@ -1,5 +1,5 @@
-import { c as create_ssr_component, v as validate_component } from "../../../chunks/index2.js";
-/* empty css                                                       */import { S as Seat, T as Tabs, a as TabItem } from "../../../chunks/Seat.js";
+import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
+import { S as Seat } from "../../../chunks/Seat.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const data = { name: "Yellow Seat", slug: "yellowseat" };
   return `${$$result.head += `<!-- HEAD_svelte-h5q2_START -->${$$result.title = `<title>Yellow Seat</title>`, ""}<meta name="description" content="Yellow Seat"><link rel="preload" as="image" href="/yellowseat.png"><link rel="preload" as="image" href="/yellowseat/banner.jpg"><!-- HEAD_svelte-h5q2_END -->`, ""}
@@ -39,60 +39,15 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
 
 			<a href="/yellowseat/venues" class="rounded-3xl bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Partner Venues</a></div></div>
 
-	<div class="seat-tabs">${validate_component(Tabs, "Tabs").$$render(
-        $$result,
-        {
-          style: "full",
-          defaultClass: "flex gap-5",
-          contentClass: "pt-4"
-        },
-        {},
-        {
-          default: () => {
-            return `${validate_component(TabItem, "TabItem").$$render(
-              $$result,
-              {
-                class: "w-full",
-                activeClasses: "w-full p-3 bg-white rounded-md border border-b-4 border-black",
-                inactiveClasses: "w-full p-3 bg-white border border-black border-b-4 rounded-md hover:border-b-4 hover:border-b-black transition",
-                open: true
-              },
-              {},
-              {
-                title: () => {
-                  return `<span slot="title" class="tab-title">Cafés</span>`;
-                },
-                default: () => {
-                  return `<div class="tab-grid"><img src="./yellowseat/cafe1.jpg" alt="Yellow Seat gallery 1" loading="lazy">
-					<div><img src="./yellowseat/cafe2.jpg" alt="Yellow Seat gallery 2" loading="lazy"></div>
-					<img src="./yellowseat/residence1.jpg" alt="Yellow Seat gallery 3" loading="lazy">
-					<img src="./yellowseat/residence2.jpg" alt="Yellow Seat gallery 4" loading="lazy"></div>`;
-                }
-              }
-            )}
-			${validate_component(TabItem, "TabItem").$$render(
-              $$result,
-              {
-                class: "w-full",
-                activeClasses: "w-full p-3 bg-white rounded-md border border-b-4 border-black",
-                inactiveClasses: "w-full p-3 bg-white border border-black border-b-4  rounded-md hover:border-b-4 hover:border-b-black transition"
-              },
-              {},
-              {
-                title: () => {
-                  return `<span slot="title" class="tab-title">Residence Halls &amp; Boarding Schools</span>`;
-                },
-                default: () => {
-                  return `<div class="tab-grid"><img src="./yellowseat/cafe1.jpg" alt="Yellow Seat gallery 1" loading="lazy">
-					<div><img src="./yellowseat/cafe2.jpg" alt="Yellow Seat gallery 2" loading="lazy"></div>
-					<img src="./yellowseat/residence1.jpg" alt="Yellow Seat gallery 3" loading="lazy">
-					<img src="./yellowseat/residence2.jpg" alt="Yellow Seat gallery 4" loading="lazy"></div>`;
-                }
-              }
-            )}`;
-          }
-        }
-      )}</div>`;
+	<div class="seat-tabs space-y-5"><div class="grid gap-5 sm:grid-cols-2"><h2 class="active inline-block w-full rounded-md border border-b-4 border-black bg-white p-3 text-center text-2xl font-medium disabled:cursor-not-allowed">Cafés
+			</h2>
+			<h2 class="active inline-block w-full rounded-md border border-b-4 border-black bg-white p-3 text-center text-2xl font-medium disabled:cursor-not-allowed">Residence Halls &amp; Boarding Schools
+			</h2></div>
+
+		<div class="tab-grid"><img src="./yellowseat/cafe1.jpg" alt="Yellow Seat gallery 1" loading="lazy">
+			<img src="./yellowseat/cafe2.jpg" alt="Yellow Seat gallery 2" loading="lazy">
+			<img src="./yellowseat/residence1.jpg" alt="Yellow Seat gallery 3" loading="lazy">
+			<img src="./yellowseat/residence2.jpg" alt="Yellow Seat gallery 4" loading="lazy"></div></div>`;
     }
   })}`;
 });

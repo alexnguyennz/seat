@@ -1,4 +1,4 @@
-import { g as getContext, c as create_ssr_component, v as validate_component, a as subscribe, b as add_classes, e as escape } from "../../chunks/index2.js";
+import { g as getContext, c as create_ssr_component, v as validate_component, b as subscribe, d as add_classes, e as escape } from "../../chunks/index.js";
 import { I as Icon } from "../../chunks/Icon.js";
 const main = "";
 const getStores = () => {
@@ -96,9 +96,9 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.pathname(pathname);
   $$result.css.add(css$1);
   $$unsubscribe_page();
-  return `<header class="mb-20"><div class="container mx-auto mt-3 flex items-center justify-between px-5"><div class="flex items-center gap-5"><a href="/">${validate_component(ChairLogo, "ChairLogo").$$render($$result, { pathname }, {}, {})}</a>
+  return `<header class="mb-20"><div class="container mx-auto mt-3 flex items-center justify-between px-5"><div class="flex items-center gap-5"><a href="/" aria-label="home page">${validate_component(ChairLogo, "ChairLogo").$$render($$result, { pathname }, {}, {})}</a>
 
-			<button class="lg:hidden">${`${validate_component(IconMenu2$1, "IconMenu2").$$render($$result, { class: "h-6 w-6" }, {}, {})}`}</button></div>
+			<button class="lg:hidden" aria-label="toggle mobile menu">${`${validate_component(IconMenu2$1, "IconMenu2").$$render($$result, { class: "h-6 w-6" }, {}, {})}`}</button></div>
 
 		<nav class="hidden lg:block"><ul class="flex gap-8 text-xl text-gray-700"><li class="${["svelte-1n72bbj", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a href="/">Home</a></li>
 				<li class="${["svelte-1n72bbj", $page.url.pathname === "/blueseat" ? "active" : ""].join(" ").trim()}"><a href="/blueseat">Blue Seat</a></li>
@@ -115,7 +115,7 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {}
   )}</a>
 
-					<ul class="invisible absolute z-10 mx-auto w-48 scale-75 space-y-2 rounded-md pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100"><li><a href="/yellowseat/menus"${add_classes(($page.url.pathname === "/yellowseat/menus" ? "subactive" : "").trim())}>Catering Menus</a></li>
+					<ul class="invisible absolute z-10 mx-auto w-48 scale-75 space-y-2 rounded-md pb-6 pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100"><li><a href="/yellowseat/menus"${add_classes(($page.url.pathname === "/yellowseat/menus" ? "subactive" : "").trim())}>Catering Menus</a></li>
 						<li><a href="/yellowseat/venues"${add_classes(($page.url.pathname === "/yellowseat/venues" ? "subactive" : "").trim())}>Partner Venues</a></li></ul></li>
 				<li class="${["svelte-1n72bbj", $page.url.pathname === "/orangeseat" ? "active" : ""].join(" ").trim()}"><a href="/orangeseat">Orange Seat</a></li>
 				<li class="${["svelte-1n72bbj", $page.url.pathname === "/greenseat" ? "active" : ""].join(" ").trim()}"><a href="/greenseat">Green Seat</a></li>
@@ -132,7 +132,7 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {}
   )}</span>
 
-					<ul class="invisible absolute z-10 mx-auto w-48 scale-75 space-y-2 rounded-md pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100"><li${add_classes(($page.url.pathname === "/team" ? "subactive" : "").trim())}><a href="/team">Our team</a></li>
+					<ul class="invisible absolute z-10 mx-auto w-48 scale-75 space-y-2 rounded-md pb-6 pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:scale-100 group-hover:opacity-100"><li${add_classes(($page.url.pathname === "/team" ? "subactive" : "").trim())}><a href="/team">Our team</a></li>
 						<li${add_classes(($page.url.pathname === "/gallery" ? "subactive" : "").trim())}><a href="/gallery">Gallery</a></li></ul></li></ul></nav>
 
 		<a href="/contact" class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white transition-all hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Get in touch</a></div>
@@ -159,7 +159,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 		<div class="justify-self-center"><h3 class="mb-2 text-2xl font-semibold">Contact us</h3>
 			<ul><li>${validate_component(IconMessageCircle2Filled$1, "IconMessageCircle2Filled").$$render($$result, { class: "mr-2 mb-1 inline" }, {}, {})}<a href="/contact" class="svelte-woxznh">Get in touch</a></li></ul></div></div>
 
-	<div class="mt-6 flex justify-center"><span>© ${escape((/* @__PURE__ */ new Date()).getFullYear())} <a href="/" class="svelte-woxznh">Seat</a>. All rights reserved. </span></div>
+	<div class="mt-6 flex justify-center"><span>© ${escape((/* @__PURE__ */ new Date()).getFullYear())} All rights reserved. </span></div>
 </footer>`;
 });
 const PageTransition = create_ssr_component(($$result, $$props, $$bindings, slots) => {

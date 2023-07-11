@@ -1,12 +1,8 @@
 <script lang="ts">
-	import { Label } from 'flowbite-svelte';
-
-	$: form = 'blue-seat';
+	export let form = 'blue-seat';
 
 	// change form name to use the right one for Netlify's Forms
 	function selectForm(service: string) {
-		console.log('test', service);
-
 		if (service === 'Blue Seat') {
 			form = 'blue-seat';
 		} else {
@@ -69,7 +65,7 @@
 			</div>
 
 			<div>
-				<select name="service" id="service" required>
+				<select name="service" required>
 					<option disabled selected value="">Type of Service</option>
 					<option value="yellowseat">Yellow Seat</option>
 					<option value="blueseat">Blue Seat</option>
@@ -114,6 +110,7 @@
 	textarea {
 		width: 100%;
 		padding: 0.75rem;
+		border-color: #6b7280;
 		border-width: 0;
 		border-bottom-width: 2px;
 		font-size: 1.25rem;
@@ -124,8 +121,25 @@
 		height: 10rem;
 	}
 
-	.inputs input:focus {
-		border-color: #1c64f2;
+	.inputs input:focus-visible,
+	select:focus-visible,
+	textarea:focus-visible {
+		border-bottom: 2px solid #1c64f2;
+		outline: 1px solid #1c64f2;
+	}
+
+	select {
+		appearance: none;
+	}
+
+	select:not([size]) {
+		background-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3e %3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3e %3c/svg%3e");
+		background-position: right 0.75rem center;
+		background-repeat: no-repeat;
+		background-size: 0.75em 0.75em;
+		padding-right: 2.5rem;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
 	}
 
 	/* workaround for poor League Spartan spacing in select options */

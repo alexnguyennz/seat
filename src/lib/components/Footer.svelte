@@ -43,7 +43,7 @@
 	</div>
 
 	<div class="mt-6 flex justify-center">
-		<span>&copy; {new Date().getFullYear()} <a href="/">Seat</a>. All rights reserved. </span>
+		<span>&copy; {new Date().getFullYear()} All rights reserved. </span>
 	</div>
 </footer>
 

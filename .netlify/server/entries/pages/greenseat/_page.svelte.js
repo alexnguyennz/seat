@@ -1,7 +1,5 @@
-import { c as create_ssr_component, v as validate_component } from "../../../chunks/index2.js";
-import { C as Carousel } from "../../../chunks/Carousel.js";
-/* empty css                                                       */import { S as Seat, T as Tabs, a as TabItem } from "../../../chunks/Seat.js";
-import { g as greenseatPage } from "../../../chunks/_server.js";
+import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
+import { S as Seat } from "../../../chunks/Seat.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const data = { name: "Green Seat", slug: "greenseat" };
   return `${$$result.head += `<!-- HEAD_svelte-tnbk78_START -->${$$result.title = `<title>Green Seat</title>`, ""}<meta name="description" content="Green Seat"><link rel="preload" as="image" href="/greenseat.png"><link rel="preload" as="image" href="/greenseat/banner.jpg"><!-- HEAD_svelte-tnbk78_END -->`, ""}
@@ -34,50 +32,12 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
 
 		<p><a href="/contact" class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Get in touch</a></p></div>
 
-	<div class="seat-tabs">${validate_component(Tabs, "Tabs").$$render(
-        $$result,
-        {
-          style: "full",
-          defaultClass: "flex gap-5",
-          contentClass: "pt-4"
-        },
-        {},
-        {
-          default: () => {
-            return `${validate_component(TabItem, "TabItem").$$render(
-              $$result,
-              {
-                class: "w-full",
-                activeClasses: "w-full p-3 bg-white rounded-md border border-b-4 border-black",
-                inactiveClasses: "w-full p-3 bg-white rounded-md hover:border-b-4 hover:border-b-black transition",
-                open: true
-              },
-              {},
-              {
-                title: () => {
-                  return `<span slot="title" class="tab-title">Event and Catering Equipment</span>`;
-                },
-                default: () => {
-                  return `<div class="tab-grid"><div class="space-y-10 ">${validate_component(Carousel, "Carousel").$$render(
-                    $$result,
-                    {
-                      images: greenseatPage,
-                      showCaptions: false,
-                      showThumbs: false,
-                      loop: true,
-                      duration: 3e3,
-                      divClass: "overflow-hidden relative"
-                    },
-                    {},
-                    {}
-                  )}</div>
-					<div><img src="./greenseat/3.jpg" alt="Green Seat gallery 1" loading="lazy"></div></div>`;
-                }
-              }
-            )}`;
-          }
-        }
-      )}</div>`;
+	<div class="seat-tabs space-y-5"><h2 class="active inline-block w-full rounded-md border border-b-4 border-black bg-white p-3 text-center text-2xl font-medium disabled:cursor-not-allowed">Cleaning Equipment
+		</h2>
+
+		<div class="tab-grid"><img src="./greenseat/1.jpg" alt="Green Seat gallery 1" loading="lazy">
+			<img src="./greenseat/2.jpg" alt="Green Seat gallery 2" loading="lazy">
+			<img src="./greenseat/3.jpg" alt="Green Seat gallery 1" loading="lazy"></div></div>`;
     }
   })}`;
 });

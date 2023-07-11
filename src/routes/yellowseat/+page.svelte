@@ -1,6 +1,4 @@
 <script>
-	import { Tabs, TabItem } from 'flowbite-svelte';
-
 	import Seat from '$lib/components/Seat.svelte';
 
 	const data = {
@@ -74,39 +72,25 @@
 		</div>
 	</div>
 
-	<div class="seat-tabs">
-		<Tabs style="full" defaultClass="flex gap-5" contentClass="pt-4">
-			<TabItem
-				class="w-full"
-				activeClasses="w-full p-3 bg-white rounded-md border border-b-4 border-black"
-				inactiveClasses="w-full p-3 bg-white border border-black border-b-4 rounded-md hover:border-b-4 hover:border-b-black transition"
-				open
+	<div class="seat-tabs space-y-5">
+		<div class="grid gap-5 sm:grid-cols-2">
+			<h2
+				class="active inline-block w-full rounded-md border border-b-4 border-black bg-white p-3 text-center text-2xl font-medium disabled:cursor-not-allowed"
 			>
-				<span slot="title" class="tab-title">Caf&#233;s</span>
-				<div class="tab-grid">
-					<img src="./yellowseat/cafe1.jpg" alt="Yellow Seat gallery 1" loading="lazy" />
-					<div>
-						<img src="./yellowseat/cafe2.jpg" alt="Yellow Seat gallery 2" loading="lazy" />
-					</div>
-					<img src="./yellowseat/residence1.jpg" alt="Yellow Seat gallery 3" loading="lazy" />
-					<img src="./yellowseat/residence2.jpg" alt="Yellow Seat gallery 4" loading="lazy" />
-				</div>
-			</TabItem>
-			<TabItem
-				class="w-full"
-				activeClasses="w-full p-3 bg-white rounded-md border border-b-4 border-black"
-				inactiveClasses="w-full p-3 bg-white border border-black border-b-4  rounded-md hover:border-b-4 hover:border-b-black transition"
+				Caf&#233;s
+			</h2>
+			<h2
+				class="active inline-block w-full rounded-md border border-b-4 border-black bg-white p-3 text-center text-2xl font-medium disabled:cursor-not-allowed"
 			>
-				<span slot="title" class="tab-title">Residence Halls & Boarding Schools</span>
-				<div class="tab-grid">
-					<img src="./yellowseat/cafe1.jpg" alt="Yellow Seat gallery 1" loading="lazy" />
-					<div>
-						<img src="./yellowseat/cafe2.jpg" alt="Yellow Seat gallery 2" loading="lazy" />
-					</div>
-					<img src="./yellowseat/residence1.jpg" alt="Yellow Seat gallery 3" loading="lazy" />
-					<img src="./yellowseat/residence2.jpg" alt="Yellow Seat gallery 4" loading="lazy" />
-				</div>
-			</TabItem>
-		</Tabs>
+				Residence Halls & Boarding Schools
+			</h2>
+		</div>
+
+		<div class="tab-grid">
+			<img src="./yellowseat/cafe1.jpg" alt="Yellow Seat gallery 1" loading="lazy" />
+			<img src="./yellowseat/cafe2.jpg" alt="Yellow Seat gallery 2" loading="lazy" />
+			<img src="./yellowseat/residence1.jpg" alt="Yellow Seat gallery 3" loading="lazy" />
+			<img src="./yellowseat/residence2.jpg" alt="Yellow Seat gallery 4" loading="lazy" />
+		</div>
 	</div>
 </Seat>

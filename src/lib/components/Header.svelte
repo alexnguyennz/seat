@@ -7,15 +7,17 @@
 
 	let toggle = false;
 
+	$: pathname, (toggle = false); // close mobile menu when navigating
+
 	import ChairLogo from '$lib/components/ChairLogo.svelte';
 </script>
 
 <header class="mb-20">
 	<div class="container mx-auto mt-3 flex items-center justify-between px-5">
 		<div class="flex items-center gap-5">
-			<a href="/"><ChairLogo {pathname} /></a>
+			<a href="/" aria-label="home page"><ChairLogo {pathname} /></a>
 
-			<button class="lg:hidden" on:click={() => (toggle = !toggle)}>
+			<button class="lg:hidden" on:click={() => (toggle = !toggle)} aria-label="toggle mobile menu">
 				{#if !toggle}
 					<IconMenu2 class="h-6 w-6" />
 				{:else}
@@ -90,7 +92,7 @@
 
 		<a
 			href="/contact"
-			class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl  font-medium text-white transition-all hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
+			class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white transition-all hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
 			>Get in touch</a
 		>
 	</div>

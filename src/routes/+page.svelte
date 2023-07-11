@@ -33,10 +33,10 @@
 	<title>Home</title>
 	<meta name="description" content="Home - Seat" />
 
-	<link rel="preload" as="image" href="./blueseat.png" />
-	<link rel="preload" as="image" href="./yellowseat.png" />
-	<link rel="preload" as="image" href="./orangeseat.png" />
-	<link rel="preload" as="image" href="./greenseat.png" />
+	<link rel="preload" as="image" href="./blueseat-sm.png" />
+	<link rel="preload" as="image" href="./yellowseat-sm.png" />
+	<link rel="preload" as="image" href="./orangeseat-sm.png" />
+	<link rel="preload" as="image" href="./greenseat-sm.png" />
 </svelte:head>
 
 <section class="text-xl">

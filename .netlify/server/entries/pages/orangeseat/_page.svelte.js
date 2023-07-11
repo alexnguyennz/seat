@@ -1,5 +1,5 @@
-import { c as create_ssr_component, v as validate_component } from "../../../chunks/index2.js";
-/* empty css                                                       */import { S as Seat, T as Tabs, a as TabItem } from "../../../chunks/Seat.js";
+import { c as create_ssr_component, v as validate_component } from "../../../chunks/index.js";
+import { S as Seat } from "../../../chunks/Seat.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const data = { name: "Orange Seat", slug: "orangeseat" };
   return `${$$result.head += `<!-- HEAD_svelte-t5a22e_START -->${$$result.title = `<title>Orange Seat</title>`, ""}<meta name="description" content="Orange Seat"><link rel="preload" as="image" href="/orangeseat.png"><link rel="preload" as="image" href="/orangeseat/banner.jpg"><!-- HEAD_svelte-t5a22e_END -->`, ""}
@@ -20,29 +20,11 @@ ${validate_component(Seat, "Seat").$$render($$result, { data }, {}, {
 
 		<p><a href="/contact" class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Get in touch</a></p></div>
 
-	<div class="seat-tabs">${validate_component(Tabs, "Tabs").$$render($$result, { style: "full", contentClass: "pt-4" }, {}, {
-        default: () => {
-          return `${validate_component(TabItem, "TabItem").$$render(
-            $$result,
-            {
-              class: "w-full",
-              activeClasses: "w-full p-3 bg-white rounded-md border border-b-4 border-black",
-              inactiveClasses: "w-full p-3 bg-white rounded-md hover:border-b-4 hover:border-b-black transition",
-              open: true
-            },
-            {},
-            {
-              title: () => {
-                return `<span slot="title" class="tab-title">Event and Catering Equipment</span>`;
-              },
-              default: () => {
-                return `<div class="tab-grid"><img src="./orangeseat/1.jpg" alt="Orange Seat gallery 1" loading="lazy">
-					<div><img src="./orangeseat/2.jpg" alt="Orange Seat gallery 2" loading="lazy"></div></div>`;
-              }
-            }
-          )}`;
-        }
-      })}</div>`;
+	<div class="seat-tabs space-y-5"><h2 class="active inline-block w-full rounded-md border border-b-4 border-black bg-white p-3 text-center text-2xl font-medium disabled:cursor-not-allowed">Event and Catering Equipment
+		</h2>
+
+		<div class="tab-grid"><img src="./orangeseat/1.jpg" alt="Orange Seat gallery 1" loading="lazy">
+			<img src="./orangeseat/2.jpg" alt="Orange Seat gallery 2" loading="lazy"></div></div>`;
     }
   })}`;
 });

@@ -1,6 +1,4 @@
 <script>
-	import { Tabs, TabItem } from 'flowbite-svelte';
-
 	import Seat from '$lib/components/Seat.svelte';
 
 	const data = {
@@ -54,24 +52,18 @@
 		</p>
 	</div>
 
-	<div class="seat-tabs">
-		<Tabs style="full" contentClass="pt-4">
-			<TabItem
-				class="w-full"
-				activeClasses="w-full p-3 bg-white rounded-md border border-b-4 border-black"
-				inactiveClasses="w-full p-3 bg-white rounded-md hover:border-b-4 hover:border-b-black transition"
-				open
-			>
-				<span slot="title" class="tab-title">Event Management</span>
-				<div class="tab-grid">
-					<img src="./blueseat/1.jpg" alt="Blue Seat gallery 1" loading="lazy" />
-					<div>
-						<img src="./blueseat/2.jpg" alt="Blue Seat gallery 2" loading="lazy" />
-					</div>
-					<img src="./blueseat/3.jpg" alt="Blue Seat gallery 3" loading="lazy" />
-					<img src="./blueseat/4.jpg" alt="Blue Seat gallery 4" loading="lazy" />
-				</div>
-			</TabItem>
-		</Tabs>
+	<div class="seat-tabs space-y-5">
+		<h2
+			class="active inline-block w-full rounded-md border border-b-4 border-black bg-white p-3 text-center text-2xl font-medium disabled:cursor-not-allowed"
+		>
+			Event Management
+		</h2>
+
+		<div class="tab-grid">
+			<img src="./blueseat/1.jpg" alt="Blue Seat gallery 1" loading="lazy" />
+			<img src="./blueseat/2.jpg" alt="Blue Seat gallery 2" loading="lazy" />
+			<img src="./blueseat/3.jpg" alt="Blue Seat gallery 3" loading="lazy" />
+			<img src="./blueseat/4.jpg" alt="Blue Seat gallery 4" loading="lazy" />
+		</div>
 	</div>
 </Seat>
