@@ -2,7 +2,7 @@
 	import { IconMessageCircle2Filled } from '@tabler/icons-svelte';
 </script>
 
-<footer class="mt-20 bg-[#183153] py-7 px-4 text-xl text-gray-200">
+<footer class="mt-20 bg-[#183153] px-4 py-7 text-xl text-gray-200">
 	<div class="container mx-auto grid justify-center gap-10 text-center md:grid-cols-3">
 		<div class="justify-self-center">
 			<h3 class="mb-2 text-2xl font-semibold">Our services</h3>
@@ -36,14 +36,14 @@
 			<h3 class="mb-2 text-2xl font-semibold">Contact us</h3>
 			<ul>
 				<li>
-					<IconMessageCircle2Filled class="mr-2 mb-1 inline" /><a href="/contact">Get in touch</a>
+					<IconMessageCircle2Filled class="mb-1 mr-2 inline" /><a href="/contact">Get in touch</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="mt-6 flex justify-center">
-		<span>&copy; {new Date().getFullYear()} All rights reserved. </span>
+		<span>&copy; {new Date().getFullYear()} all rights reserved. </span>
 	</div>
 </footer>
 
@@ -56,7 +56,7 @@
 		content: '';
 		position: absolute;
 		width: 0;
-		bottom: -5px;
+		bottom: -1px;
 		left: 0;
 		height: 2px;
 		background-color: white;

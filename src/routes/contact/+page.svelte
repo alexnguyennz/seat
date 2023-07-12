@@ -20,19 +20,33 @@
 	<h1 class="page-heading">Get in touch</h1>
 
 	<div>
-		<form name={form} method="POST" data-netlify="true">
+		<form name={form} method="POST" data-netlify="true" class="grid gap-8 sm:grid-cols-2">
 			<input type="hidden" name="form-name" value={form} />
 
-			<div class="inputs">
-				<input type="text" name="name" placeholder="Your name" required />
-				<input type="email" name="email" placeholder="Your email" required />
-				<input type="url" name="website" placeholder="Your website" />
-				<input type="text" name="phone-number" placeholder="Your phone number" />
+			<div class="relative">
+				<label for="name">Your name <span class="text-red-500">*</span></label>
+				<input type="text" name="name" id="name" required />
 			</div>
 
-			<div>
+			<div class="relative">
+				<label for="email">Your email <span class="text-red-500">*</span></label>
+				<input type="email" name="email" id="email" required />
+			</div>
+
+			<div class="relative">
+				<label for="website">Your website</label>
+				<input type="url" name="website" id="website" />
+			</div>
+
+			<div class="relative">
+				<label for="phone-number">Your phone number</label>
+				<input type="text" name="phone-number" id="phone-number" />
+			</div>
+
+			<div class="relative col-span-2">
+				<label for="service">Service <span class="text-red-500">*</span></label>
 				<select name="service" id="service" required on:change={(e) => selectForm(e.target.value)}>
-					<option disabled selected value="">Type of service</option>
+					<option disabled selected value="" />
 					<option value="Yellow Seat">Yellow Seat</option>
 					<option value="Blue Seat">Blue Seat</option>
 					<option value="Orange Seat">Orange Seat</option>
@@ -40,21 +54,20 @@
 				</select>
 			</div>
 
-			<div>
-				<textarea name="message" placeholder="Your message" required />
+			<div class="relative col-span-2">
+				<label for="message">Your message <span class="text-red-500">*</span></label>
+				<textarea name="message" id="message" class="h-56" required />
 			</div>
 
-			<div class="button-container">
-				<button
-					type="submit"
-					class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
+			<div class="col-span-2 -mt-2 text-center">
+				<button type="submit" class="button-link from-blue-500 via-blue-600 to-blue-700"
 					>Send message</button
 				>
 			</div>
 		</form>
 
 		<!-- hidden Netlify form -->
-		<form name="yellow-orange-green-seat" method="POST" data-netlify="true" class="hidden-form">
+		<form name="yellow-orange-green-seat" method="POST" data-netlify="true" class="hidden">
 			<input type="hidden" name="form-name" value="yellow-orange-green-seat" />
 
 			<div>
@@ -86,70 +99,42 @@
 </section>
 
 <style>
-	.button-container {
-		text-align: center;
-	}
-
-	form {
-		display: flex;
-		flex-direction: column;
-		gap: 1.25rem;
-	}
-
-	.hidden-form {
-		display: none;
-	}
-
-	.inputs {
-		display: grid;
-		gap: 1.25rem;
-	}
-
 	input,
 	select,
 	textarea {
 		width: 100%;
-		padding: 0.75rem;
-		border-color: #6b7280;
-		border-width: 0;
-		border-bottom-width: 2px;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
+		padding: 1rem;
+		border: 1px solid #6b7280;
+		@apply text-xl;
 	}
 
-	textarea {
-		height: 10rem;
+	label {
+		position: absolute;
+		top: -1rem;
+		left: 1rem;
+		padding: 5px 10px;
+		background: white;
 	}
 
-	.inputs input:focus-visible,
+	input:focus-visible,
 	select:focus-visible,
 	textarea:focus-visible {
-		border-bottom: 2px solid #1c64f2;
+		border: 1px solid #1c64f2;
 		outline: 1px solid #1c64f2;
 	}
 
+	/* remove default arrow */
 	select {
 		appearance: none;
 	}
 
 	select:not([size]) {
-		background-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3e %3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3e %3c/svg%3e");
+		background-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3e %3cpath stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3e %3c/svg%3e");
 		background-position: right 0.75rem center;
 		background-repeat: no-repeat;
 		background-size: 0.75em 0.75em;
 		padding-right: 2.5rem;
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
-	}
-
-	/* workaround for poor League Spartan spacing in select options */
-	select option {
-		font-family: Tahoma, system-ui, sans-serif;
-	}
-
-	@media (min-width: 768px) {
-		.inputs {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
 	}
 </style>

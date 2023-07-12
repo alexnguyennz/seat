@@ -49,27 +49,20 @@
 			and medical requirements and can offer delicious diary options.
 		</p>
 		<p class="mb-8 text-xl">Contact us to discuss our pricing models.</p>
-		<p>
-			<a
-				href="/contact"
-				class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
-				>Get in touch</a
-			>
-		</p>
+	</div>
 
-		<div class="flex justify-center gap-5">
-			<a
-				href="/yellowseat/menus"
-				class="rounded-3xl bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
-				>Catering Menus</a
-			>
+	<p class="mt-8 text-center">
+		<a href="/contact" class="button-link from-blue-500 via-blue-600 to-blue-700">Get in touch</a>
+	</p>
 
-			<a
-				href="/yellowseat/venues"
-				class="rounded-3xl bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
-				>Partner Venues</a
-			>
-		</div>
+	<div class="mt-8 flex justify-center gap-5">
+		<a href="/yellowseat/menus" class="button-link from-slate-600 via-slate-700 to-slate-800"
+			>Catering Menus</a
+		>
+
+		<a href="/yellowseat/venues" class="button-link from-slate-600 via-slate-700 to-slate-800"
+			>Partner Venues</a
+		>
 	</div>
 
 	<div class="seat-tabs space-y-5">

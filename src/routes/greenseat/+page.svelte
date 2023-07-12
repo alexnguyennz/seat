@@ -45,15 +45,11 @@
 			For a quality, reliable and affordable cleaning solution, contact a member of our team for a
 			free no obligation quote.
 		</p>
-
-		<p>
-			<a
-				href="/contact"
-				class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
-				>Get in touch</a
-			>
-		</p>
 	</div>
+
+	<p class="mt-8 text-center">
+		<a href="/contact" class="button-link from-blue-500 via-blue-600 to-blue-700">Get in touch</a>
+	</p>
 
 	<div class="seat-tabs space-y-5">
 		<h2

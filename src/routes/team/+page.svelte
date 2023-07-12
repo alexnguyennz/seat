@@ -1,4 +1,6 @@
 <script>
+	import { IconAwardFilled } from '@tabler/icons-svelte';
+
 	import TeamMember from '$lib/components/routes/team/TeamMember.svelte';
 
 	let data = [
@@ -27,37 +29,32 @@
 	<link rel="preload" as="image" href="/team/clint-schoultz.png" />
 	<link rel="preload" as="image" href="/team/bradley-alford.png" />
 	<link rel="preload" as="image" href="/team/jessica-armstrong.png" />
-
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
-	/>
 </svelte:head>
 
 <section class="space-y-5">
 	<h1 class="page-heading">Our team</h1>
 
-	<div class="members">
+	<div class="grid gap-20 lg:grid-cols-3">
 		<TeamMember data={data[0]}>
 			<div class="member">
 				<ul class="award">
 					<li>
-						<i class="ti ti-award-filled" />
+						<IconAwardFilled class="inline" />
 						<span>Masters of Business Administration - Innovation and Leadership</span>
 					</li>
 					<li>
-						<i class="ti ti-award-filled" />
+						<IconAwardFilled class="inline" />
 						<span>Masters of Hotel Management</span>
 					</li>
 				</ul>
 
-				<div class="space">
-					<p>
+				<div>
+					<p class="my-5">
 						Clint has worked in hospitality for over 20 years across fine dining, cafes, public and
 						private health care, large events, residence halls and many more.
 					</p>
 
-					<div id="clint-schoultz" class="toggle space">
+					<div id="clint-schoultz" class="toggle space-y-5">
 						<p>
 							He uses his years of influential leadership and industry knowledge, to support his
 							team to achieve great customer outcomes. He has led the service delivery for high
@@ -83,12 +80,12 @@
 		</TeamMember>
 
 		<TeamMember data={data[1]}>
-			<div class="member space">
-				<p>
+			<div class="member">
+				<p class="my-5">
 					Brad has worked in the hospitality industry for 20+ years in various management roles.
 				</p>
 
-				<div id="bradley-alford" class="toggle space">
+				<div id="bradley-alford" class="toggle space-y-5">
 					<p>During his tenure he has managed numerous stadiums, including:</p>
 					<ul>
 						<li>Westpac Stadium</li>
@@ -130,13 +127,13 @@
 
 		<TeamMember data={data[2]}>
 			<div class="member space">
-				<p>
+				<p class="my-5">
 					With over 20 years of experience in the hospitality sector Jessica (Jess) brings a wealth
 					of knowledge and a can do attitude to any event she works on. From small private
 					functions, to arenas, stadiums and green sites Jess has seen it all.
 				</p>
 
-				<div id="jessica-armstrong" class="toggle space">
+				<div id="jessica-armstrong" class="toggle space-y-5">
 					<p>
 						She has attended year 1 and 2 at the Venue Management School in Kingscliff Australia and
 						is a long standing member of EVANZ.
@@ -166,36 +163,15 @@
 
 <style>
 	ul {
-		list-style-type: disc;
-		margin-left: 1.25rem;
-	}
-
-	.space > :not([hidden]) ~ :not([hidden]) {
-		margin-top: calc(1rem * calc(1 - 0));
-		margin-bottom: calc(1rem * 0);
-	}
-
-	.members {
-		display: grid;
-		gap: 2rem;
+		@apply ml-6 list-disc;
 	}
 
 	.member {
-		margin-top: 0.75rem;
-		font-size: 1.25rem;
-		line-height: 1.75rem;
+		@apply mt-3 text-xl;
 	}
 
 	.award {
-		list-style-type: none;
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-
-	@media (min-width: 768px) {
-		.members {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-		}
+		@apply ml-0 list-none;
 	}
 
 	.toggle {

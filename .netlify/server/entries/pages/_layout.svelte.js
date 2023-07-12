@@ -62,6 +62,15 @@ const IconMessageCircle2Filled = create_ssr_component(($$result, $$props, $$bind
   })}`;
 });
 const IconMessageCircle2Filled$1 = IconMessageCircle2Filled;
+const IconX = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const iconNode = [["path", { "d": "M18 6l-12 12" }], ["path", { "d": "M6 6l12 12" }]];
+  return `${validate_component(Icon, "Icon").$$render($$result, Object.assign({}, { name: "x" }, $$props, { iconNode }), {}, {
+    default: () => {
+      return `${slots.default ? slots.default({}) : ``}`;
+    }
+  })}`;
+});
+const IconX$1 = IconX;
 const ChairLogo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
@@ -92,13 +101,17 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   let { pathname = "" } = $$props;
+  let toggle = false;
   if ($$props.pathname === void 0 && $$bindings.pathname && pathname !== void 0)
     $$bindings.pathname(pathname);
   $$result.css.add(css$1);
+  {
+    toggle = false;
+  }
   $$unsubscribe_page();
   return `<header class="mb-20"><div class="container mx-auto mt-3 flex items-center justify-between px-5"><div class="flex items-center gap-5"><a href="/" aria-label="home page">${validate_component(ChairLogo, "ChairLogo").$$render($$result, { pathname }, {}, {})}</a>
 
-			<button class="lg:hidden" aria-label="toggle mobile menu">${`${validate_component(IconMenu2$1, "IconMenu2").$$render($$result, { class: "h-6 w-6" }, {}, {})}`}</button></div>
+			<button class="lg:hidden" aria-label="toggle mobile menu">${!toggle ? `${validate_component(IconMenu2$1, "IconMenu2").$$render($$result, { class: "h-6 w-6" }, {}, {})}` : `${validate_component(IconX$1, "IconX").$$render($$result, { class: "h-6 w-6" }, {}, {})}`}</button></div>
 
 		<nav class="hidden lg:block"><ul class="flex gap-8 text-xl text-gray-700"><li class="${["svelte-1n72bbj", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a href="/">Home</a></li>
 				<li class="${["svelte-1n72bbj", $page.url.pathname === "/blueseat" ? "active" : ""].join(" ").trim()}"><a href="/blueseat">Blue Seat</a></li>
@@ -138,7 +151,30 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 		<a href="/contact" class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white transition-all hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Get in touch</a></div>
 
 	
-	<nav class="mt-6 lg:hidden">${``}</nav>
+	<nav class="mt-6 lg:hidden">${toggle ? `<ul class="flex w-full flex-col gap-5 bg-gray-100 p-5 text-xl text-gray-700"><li class="${["svelte-1n72bbj", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}"><a href="/" class="block">Home</a></li>
+				<li class="${["svelte-1n72bbj", $page.url.pathname === "/blueseat" ? "active" : ""].join(" ").trim()}"><a href="/blueseat" class="block">Blue Seat</a></li>
+				<li class="group relative"><a href="/yellowseat" class="${[
+    "flex items-center justify-between gap-1 svelte-1n72bbj",
+    $page.url.pathname.startsWith("/yellowseat") ? "active" : ""
+  ].join(" ").trim()}">Yellow Seat</a>
+
+					<ul class="ml-6 mt-3 space-y-2"><li><a href="/yellowseat/menus" class="${[
+    "block",
+    $page.url.pathname === "/yellowseat/menus" ? "subactive" : ""
+  ].join(" ").trim()}">— Catering Menus</a></li>
+						<li><a href="/yellowseat/venues" class="${[
+    "block",
+    $page.url.pathname === "/yellowseat/venues" ? "subactive" : ""
+  ].join(" ").trim()}">— Partner Venues</a></li></ul></li>
+				<li class="${["svelte-1n72bbj", $page.url.pathname === "/orangeseat" ? "active" : ""].join(" ").trim()}"><a href="/orangeseat" class="block">Orange Seat</a></li>
+				<li class="${["svelte-1n72bbj", $page.url.pathname === "/greenseat" ? "active" : ""].join(" ").trim()}"><a href="/greenseat" class="block">Green Seat</a></li>
+				<li class="group relative"><span class="${[
+    "flex cursor-default items-center justify-between gap-1 transition hover:text-blue-700 svelte-1n72bbj",
+    $page.url.pathname === "/team" || $page.url.pathname === "/gallery" ? "active" : ""
+  ].join(" ").trim()}">About</span>
+
+					<ul class="ml-6 mt-3 space-y-2"><li${add_classes(($page.url.pathname === "/team" ? "subactive" : "").trim())}><a href="/team" class="block">— Our team</a></li>
+						<li${add_classes(($page.url.pathname === "/gallery" ? "subactive" : "").trim())}><a href="/gallery" class="block">— Gallery</a></li></ul></li></ul>` : ``}</nav>
 </header>`;
 });
 const Footer_svelte_svelte_type_style_lang = "";

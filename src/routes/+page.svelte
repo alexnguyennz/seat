@@ -91,13 +91,7 @@
 		<h2 class="page-heading mb-4">The story behind the name</h2>
 
 		<div class="grid gap-10 md:grid-cols-2">
-			<img
-				src="/name.webp"
-				alt="blue seats"
-				width="320"
-				height="207"
-				class="mx-auto w-full rounded-lg"
-			/>
+			<img src="/name.webp" alt="blue seats" width="320" height="207" class="mx-auto mt-2 w-full" />
 
 			<div class="space-y-5">
 				<p>

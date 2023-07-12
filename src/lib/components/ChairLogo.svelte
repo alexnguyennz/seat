@@ -35,7 +35,7 @@
 	>{#if mounted}
 		{#key pathname}
 			<path
-				class="transition duration-500 "
+				class="transition duration-500"
 				fill={drawn ? colour : 'white'}
 				color={drawn ? colour : 'white'}
 				stroke={colour}

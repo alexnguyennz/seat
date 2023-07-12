@@ -12,7 +12,7 @@
 	import ChairLogo from '$lib/components/ChairLogo.svelte';
 </script>
 
-<header class="mb-20">
+<header class="mb-28">
 	<div class="container mx-auto mt-3 flex items-center justify-between px-5">
 		<div class="flex items-center gap-5">
 			<a href="/" aria-label="home page"><ChairLogo {pathname} /></a>
@@ -27,7 +27,7 @@
 		</div>
 
 		<nav class="hidden lg:block">
-			<ul class="flex gap-8 text-xl text-gray-700">
+			<ul class="flex gap-8 text-xl tracking-tight text-gray-700">
 				<li class:active={$page.url.pathname === '/'}><a href="/">Home</a></li>
 				<li class:active={$page.url.pathname === '/blueseat'}>
 					<a href="/blueseat">Blue Seat</a>
@@ -90,11 +90,7 @@
 			</ul>
 		</nav>
 
-		<a
-			href="/contact"
-			class="rounded-3xl bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-8 py-3 text-xl font-medium text-white transition-all hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
-			>Get in touch</a
-		>
+		<a href="/contact" class="button-link from-blue-500 via-blue-600 to-blue-700">Get in touch</a>
 	</div>
 
 	<!-- mobile header -->

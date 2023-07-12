@@ -36,7 +36,7 @@ const SeatCard = create_ssr_component(($$result, $$props, $$bindings, slots) => 
     $$bindings.data(data);
   return `<div class="flex flex-col overflow-hidden rounded-3xl border-2 border-gray-500 shadow-md"><a${add_attribute("href", `/${data.slug}`, 0)}><img${add_attribute("src", `./${data.slug}-sm.png`, 0)}${add_attribute("alt", `${data.name} logo`, 0)} class="w-full"></a>
 	<div class="px-6 py-4"><p class="text-center">${escape(data.description)}</p></div>
-	<div class="mx-auto mt-auto px-6 pt-4 pb-2"><a${add_attribute("href", `/${data.slug}`, 0)} class="mb-2 flex items-start gap-2 rounded-full bg-gray-600 px-4 pt-2 pb-1 text-lg font-semibold text-gray-100 transition hover:bg-gray-700">Learn More ${validate_component(IconArrowRight$1, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div>`;
+	<div class="mx-auto mt-auto px-6 pb-2 pt-4"><a${add_attribute("href", `/${data.slug}`, 0)} class="mb-2 flex items-start gap-2 rounded-full bg-gray-600 px-4 pb-1 pt-2 text-lg font-semibold text-gray-100 transition hover:bg-gray-700"${add_attribute("aria-label", `${data.name}'s page`, 0)}>Learn More ${validate_component(IconArrowRight$1, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div>`;
 });
 const ListItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<li class="flex items-center gap-3">${validate_component(IconCircleCheck$1, "IconCircleCheck").$$render(
@@ -72,7 +72,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       description: "Corporate cleaning, carpets, and upholstery"
     }
   ];
-  return `${$$result.head += `<!-- HEAD_svelte-1vuvgno_START -->${$$result.title = `<title>Home</title>`, ""}<meta name="description" content="Home - Seat"><link rel="preload" as="image" href="./blueseat.png"><link rel="preload" as="image" href="./yellowseat.png"><link rel="preload" as="image" href="./orangeseat.png"><link rel="preload" as="image" href="./greenseat.png"><!-- HEAD_svelte-1vuvgno_END -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-p4tobk_START -->${$$result.title = `<title>Home</title>`, ""}<meta name="description" content="Home - Seat"><link rel="preload" as="image" href="./blueseat-sm.png"><link rel="preload" as="image" href="./yellowseat-sm.png"><link rel="preload" as="image" href="./orangeseat-sm.png"><link rel="preload" as="image" href="./greenseat-sm.png"><!-- HEAD_svelte-p4tobk_END -->`, ""}
 
 <section class="text-xl"><div class="mb-16"><h2 class="page-heading mb-4">Our services</h2>
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-2">${each(seats, (seat) => {

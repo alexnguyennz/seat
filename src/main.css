@@ -3,15 +3,18 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'League Spartan';
+	font-family: 'Jost';
 	font-display: swap;
-	src: url('/fonts/LeagueSpartan.woff2') format('woff2');
+	src: url('/fonts/Jost.woff2') format('woff2');
 }
 
 /* Base */
 html {
-	font-weight: 450;
-	font-family: 'League Spartan', system-ui, sans-serif;
+	font-family: 'Jost', system-ui, sans-serif;
+}
+
+h2 {
+	@apply tracking-tight;
 }
 
 header {
@@ -27,10 +30,15 @@ header nav .active, header nav .subactive {
 }
 
 .page-heading {
+	@apply tracking-tight;
 	text-align: center;
 	font-size: 3rem;
 	line-height: 1;
 	font-weight: 600;
+}
+
+.button-link {
+	@apply rounded-3xl tracking-tight bg-gradient-to-r px-6 py-3 text-xl font-semibold text-white transition-all hover:bg-gradient-to-br active:translate-y-[1px];
 }
 
 /* /seat */
@@ -48,14 +56,7 @@ header nav .active, header nav .subactive {
 }
 
 .tab-grid {
-	display: grid;
-	gap: 2.5rem;
-}
-
-@media (min-width: 768px) {
-	.tab-grid {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
+	@apply grid gap-5 md:grid-cols-2;
 }
 
 /* Animated link */
@@ -67,7 +68,7 @@ header nav .active, header nav .subactive {
 	content: '';
 	position: absolute;
 	width: 0;
-	bottom: -5px;
+	bottom: -1px;
 	left: 0;
 	height: 2px;
 	background-color: black;
