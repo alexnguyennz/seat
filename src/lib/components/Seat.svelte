@@ -11,11 +11,5 @@
 		alt={`${data.name} banner`}
 	/>
 
-	<img
-		src={`./${data.slug}/banner.jpg`}
-		class="mb-6 w-full rounded-xl"
-		alt={`${data.name} banner`}
-	/>
-
 	<slot />
 </div>
