@@ -105,7 +105,6 @@
 		width: 100%;
 		padding: 1rem;
 		border: 1px solid #6b7280;
-		@apply text-xl;
 	}
 
 	label {

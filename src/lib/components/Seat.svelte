@@ -10,6 +10,5 @@
 		class="mb-6 w-full rounded-xl"
 		alt={`${data.name} banner`}
 	/>
-
 	<slot />
 </div>
