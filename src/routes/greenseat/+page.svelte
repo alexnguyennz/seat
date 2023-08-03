@@ -1,9 +1,5 @@
 <script>
-	import { Carousel, Tabs, TabItem } from 'flowbite-svelte';
-
-	import { greenseatPage } from '../../lib/gallery/+server.js';
-
-	import Seat from '$lib/components/seat.svelte';
+	import Seat from '$lib/components/Seat.svelte';
 
 	const data = {
 		name: 'Green Seat',
@@ -20,7 +16,7 @@
 </svelte:head>
 
 <Seat {data}
-	><div class="space">
+	><div class="space-y-5">
 		<p>
 			At Green Seat we take the time to listen and guarantee that we are continuously providing
 			consistent cleaning services that suits your needs. We strive for honest relationships which
@@ -49,41 +45,24 @@
 			For a quality, reliable and affordable cleaning solution, contact a member of our team for a
 			free no obligation quote.
 		</p>
-
-		<p>
-			<a
-				href="/contact"
-				class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-3xl text-xl px-8 py-3"
-				>Get in touch</a
-			>
-		</p>
 	</div>
 
+	<p class="my-10 text-center">
+		<a href="/contact" class="button-link from-blue-500 via-blue-600 to-blue-700">Get in touch</a>
+	</p>
+
 	<div class="seat-tabs">
-		<Tabs style="full" defaultClass="flex gap-5" contentClass="p-4">
-			<TabItem
-				class="w-full"
-				activeClasses="w-full p-3 bg-white rounded-md border border-b-4 border-black"
-				inactiveClasses="w-full p-3 bg-white rounded-md hover:border-b-4 hover:border-b-black transition"
-				open
-			>
-				<span slot="title" class="tab-title">Event and Catering Equipment</span>
-				<div class="tab-grid">
-					<div class="space-y-10  ">
-						<Carousel
-							images={greenseatPage}
-							showCaptions={false}
-							showThumbs={false}
-							loop
-							duration={3000}
-							divClass="overflow-hidden relative"
-						/>
-					</div>
-					<div>
-						<img src="./greenseat/3.jpg" alt="Green Seat gallery 1" loading="lazy" />
-					</div>
-				</div>
-			</TabItem>
-		</Tabs>
+		<h2>Cleaning Equipment</h2>
+
+		<div class="tab-grid">
+			<img src="./greenseat/1.jpg" alt="Green Seat gallery 1" loading="lazy" />
+			<img src="./greenseat/2.jpg" alt="Green Seat gallery 2" loading="lazy" />
+		</div>
+		<img
+			src="./greenseat/3.jpg"
+			alt="Green Seat gallery 1"
+			loading="lazy"
+			class="mx-auto w-full rounded-xl shadow-lg md:w-auto"
+		/>
 	</div>
 </Seat>

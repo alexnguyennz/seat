@@ -1,8 +1,8 @@
 <script>
 	import '../main.css';
 
-	import Header from '$lib/components/header.svelte';
-	import Footer from '$lib/components/footer.svelte';
+	import Header from '$lib/components/header/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	import PageTransition from '$lib/components/PageTransition.svelte';
 
@@ -10,10 +10,10 @@
 	export let data;
 </script>
 
-<div class="app">
-	<Header />
+<div class="flex min-h-screen flex-col">
+	<Header pathname={data.pathname} />
 
-	<main class="container">
+	<main class="container mx-auto flex max-w-6xl flex-1 flex-col px-5">
 		<PageTransition pathname={data.pathname}>
 			<slot />
 		</PageTransition>
@@ -21,24 +21,3 @@
 
 	<Footer />
 </div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		max-width: 72rem;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 2.5rem;
-		padding-left: 1.25rem;
-		padding-right: 1.25rem;
-		color: rgb(31 41 55);
-	}
-</style>
