@@ -1,8 +1,6 @@
 <script>
 	import { IconMessageCircle2Filled } from '@tabler/icons-svelte';
 
-	import { seats } from '$lib/data.ts';
-
 	import blueseat from '$lib/assets/logo/blueseat-sm.png';
 	import yellowseat from '$lib/assets/logo/yellowseat-sm.png';
 	import orangeseat from '$lib/assets/logo/orangeseat-sm.png';
