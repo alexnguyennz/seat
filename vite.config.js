@@ -20,6 +20,9 @@ const config = {
 	plugins: [sveltekit(), VitePluginRemoveHashFontFiles()],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
+	},
+	build: {
+		assetsInlineLimit: 8192 // default 4KB
 	}
 };
 
