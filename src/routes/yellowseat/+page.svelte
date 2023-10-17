@@ -1,4 +1,6 @@
 <script>
+	import { IconExternalLink } from '@tabler/icons-svelte';
+
 	import Seat from '$lib/components/Seat.svelte';
 
 	const data = {
@@ -76,8 +78,8 @@
 			</p>
 
 			<div class="mx-auto mt-5">
-				<a href="/yellowseat/menus" class="button-link from-slate-600 via-slate-700 to-slate-800"
-					>Menus</a
+				<a href="https://conceptfood.co.nz" target="_blank" class="button-link item flex gap-1 items-center from-slate-600 via-slate-700 to-slate-800"
+					>Catering <IconExternalLink stroke={3} class={`h-4 w-4`} /></a
 				>
 			</div>
 		</div>

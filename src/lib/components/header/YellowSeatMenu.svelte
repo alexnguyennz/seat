@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 
 	import { createDropdownMenu, melt } from '@melt-ui/svelte';
-	import { IconChevronDown } from '@tabler/icons-svelte';
+	import { IconExternalLink, IconChevronDown } from '@tabler/icons-svelte';
 
 	const {
 		elements: { trigger, menu, item, arrow },
@@ -32,8 +32,8 @@
 		<li class:subactive={$page.url.pathname === '/yellowseat'}>
 			<a href="/yellowseat/" class="item block" use:melt={$item}>Yellow Seat</a>
 		</li>
-		<li class:subactive={$page.url.pathname === '/yellowseat/menus'}>
-			<a href="/yellowseat/menus" class="item block" use:melt={$item}>Catering menus</a>
+		<li>
+			<a href="https://conceptfood.co.nz" target="_blank" class="item flex gap-1 items-center" use:melt={$item}>Catering <IconExternalLink stroke={3} class={`h-4 w-4`} /></a>
 		</li>
 		<li class:subactive={$page.url.pathname === '/yellowseat/venues'}>
 			<a href="/yellowseat/venues" class="item block" use:melt={$item}>Partner venues</a>

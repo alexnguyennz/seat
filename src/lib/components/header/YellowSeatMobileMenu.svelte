@@ -1,8 +1,7 @@
 <script>
-	// Collapsible
 	import { createCollapsible, melt } from '@melt-ui/svelte';
 	import { slide } from 'svelte/transition';
-	import { IconChevronDown } from '@tabler/icons-svelte';
+	import { IconExternalLink, IconChevronDown } from '@tabler/icons-svelte';
 	import { page } from '$app/stores';
 
 	const {
@@ -34,9 +33,9 @@
 			</li>
 			<li>
 				<a
-					href="/yellowseat/menus"
+					href="https://conceptfood.co.nz" target="_blank"
 					class:subactive={$page.url.pathname === '/yellowseat/menus'}
-					class="block py-0.5 tracking-tighter">Catering menus</a
+					class="py-0.5 tracking-tighter flex gap-1 items-center">Catering <IconExternalLink stroke={3} class={`h-4 w-4`} /></a
 				>
 			</li>
 			<li>
