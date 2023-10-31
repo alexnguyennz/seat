@@ -14,13 +14,4 @@
 	<p class="my-5">
 		{data.description}
 	</p>
-
-	<div class="mt-auto">
-		<a
-			href={`/${data.slug}`}
-			class="animated-link inline-flex items-center justify-center gap-2 text-xl tracking-tight"
-			aria-label={`${data.name}'s page`}
-			>Learn More <span class="sr-only">→</span><IconArrowNarrowRight stroke="1" /></a
-		>
-	</div>
 </article>
