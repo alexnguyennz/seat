@@ -20,7 +20,7 @@
 			class:active={$page.url.pathname.startsWith('/yellowseat')}
 			>Yellow Seat
 
-			<IconChevronDown stroke={4} class={`h-5 w-5 transition ${$open ? '-rotate-180' : ''}`} />
+			<IconChevronDown stroke={4} class={`h-5 w-5 transition ${$open ? 'rotate-180' : ''}`} />
 		</span>
 
 		<span class="sr-only">Open Yellow Seat menu</span>
@@ -36,7 +36,7 @@
 			<a href="https://conceptfood.co.nz" target="_blank" class="item flex gap-1 items-center" use:melt={$item}>Catering <IconExternalLink stroke={3} class={`h-4 w-4`} /></a>
 		</li>
 		<li class:subactive={$page.url.pathname === '/yellowseat/venues'}>
-			<a href="/yellowseat/venues" class="item block" use:melt={$item}>Partner venues</a>
+			<a href="/yellowseat/venues" class="item block" use:melt={$item}>Venues</a>
 		</li>
 		<li use:melt={$arrow} class="arrow" />
 	</ul>

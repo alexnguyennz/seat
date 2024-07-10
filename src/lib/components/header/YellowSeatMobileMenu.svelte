@@ -18,7 +18,7 @@
 		>
 		<IconChevronDown
 			stroke={4}
-			class={`h-5 w-5 text-gray-700 transition ${$open ? '-rotate-180' : ''}`}
+			class={`h-5 w-5 text-gray-700 transition ${$open ? 'rotate-180' : ''}`}
 		/>
 	</button>
 
@@ -42,7 +42,7 @@
 				<a
 					href="/yellowseat/venues"
 					class:subactive={$page.url.pathname === '/yellowseat/venues'}
-					class="block py-0.5 tracking-tighter">Partner venues</a
+					class="block py-0.5 tracking-tighter">Venues</a
 				>
 			</li>
 		</ul>
