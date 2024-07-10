@@ -20,7 +20,7 @@
 			class:active={$page.url.pathname === '/team' || $page.url.pathname === '/gallery'}
 			>About
 
-			<IconChevronDown stroke={4} class={`h-5 w-5 transition ${$open ? '-rotate-180' : ''}`} />
+			<IconChevronDown stroke={4} class={`h-5 w-5 transition ${$open ? 'rotate-180' : ''}`} />
 		</span>
 
 		<span class="sr-only">Open About menu</span>

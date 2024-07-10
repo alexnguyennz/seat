@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="rounded-lg bg-slate-50 text-gray-800 shadow-md transition duration-300 hover:translate-y-2"
+	class="flex flex-col rounded-lg bg-slate-50 text-gray-800 shadow-md transition duration-300 hover:translate-y-2"
 >
 	<div>
 		<a href={`${data.url}`} target="_blank" rel="noopener noreferrer nofollow">
@@ -14,11 +14,11 @@
 				alt={`${data.name}`}
 				width="320"
 				height="207"
-				class="mx-auto h-60 w-full rounded-t-lg"
+				class="mx-auto h-60 w-full object-contain p-5"
 			/></a
 		>
 	</div>
-	<div class="p-5">
+	<div class="mt-auto p-5">
 		<h2 class="text-center text-xl">
 			<a
 				href={`${data.url}`}

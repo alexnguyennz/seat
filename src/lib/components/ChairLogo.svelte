@@ -16,7 +16,7 @@
 	} else if ($page.url.pathname === '/blueseat') {
 		colourStroke = '#4C7AD1';
 		colourFill = 'blueseat';
-	} else if ($page.url.pathname === '/greenseat') {
+	} else if ($page.url.pathname.startsWith('/greenseat')) {
 		colourStroke = '#66B031';
 		colourFill = 'greenseat';
 	} else if ($page.url.pathname === '/orangeseat') {

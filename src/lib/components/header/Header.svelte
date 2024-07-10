@@ -4,6 +4,7 @@
 
 	import ChairLogo from '$lib/components/ChairLogo.svelte';
 	import YellowSeatMobileMenu from '$lib/components/header/YellowSeatMobileMenu.svelte';
+	import GreenSeatMobileMenu from "$lib/components/header/GreenSeatMobileMenu.svelte";
 	import AboutMobileMenu from '$lib/components/header/AboutMobileMenu.svelte';
 
 	// Collapsible
@@ -11,6 +12,7 @@
 	import { slide } from 'svelte/transition';
 	import { IconX, IconMenu2 } from '@tabler/icons-svelte';
 	import YellowSeatMenu from '$lib/components/header/YellowSeatMenu.svelte';
+	import GreenSeatMenu from "$lib/components/header/GreenSeatMenu.svelte";
 	import AboutMenu from '$lib/components/header/AboutMenu.svelte';
 
 	const open = writable(false);
@@ -57,9 +59,7 @@
 				<li class="animated-header-link" class:active={$page.url.pathname === '/orangeseat'}>
 					<a href="/orangeseat">Orange Seat</a>
 				</li>
-				<li class="animated-header-link" class:active={$page.url.pathname === '/greenseat'}>
-					<a href="/greenseat">Green Seat</a>
-				</li>
+				<GreenSeatMenu />
 				<AboutMenu />
 			</ul>
 		</nav>
@@ -85,9 +85,7 @@
 						<li class:active={$page.url.pathname === '/orangeseat'}>
 							<a href="/orangeseat" class="block py-0.5 tracking-tighter">Orange Seat</a>
 						</li>
-						<li class:active={$page.url.pathname === '/greenseat'}>
-							<a href="/greenseat" class="block py-0.5 tracking-tighter">Green Seat</a>
-						</li>
+						<GreenSeatMobileMenu />
 						<AboutMobileMenu />
 					</ul>
 				</nav>

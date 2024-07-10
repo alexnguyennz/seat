@@ -32,7 +32,60 @@ export const yellowSeatVenues = [
 	},
 	{
 		name: 'Erskine Chapel',
-		url: 'https://www.thewellingtoncompany.co.nz/projects/erskine/',
+		url: 'https://www.erskinechapel.co.nz/',
 		image: 'erskine-chapel.jpg'
+	},
+	{
+		name: 'Victoria House',
+		url: 'https://www.vichouse.org/',
+		image: 'victoria-house.jpg'
+	},
+	{
+		name: 'Oat Café',
+		url: 'https://oatcafe.co.nz',
+		image: 'oat-cafe.png'
+	},
+	{
+		name: 'Mary Potter Hospice',
+		url: 'https://marypotter.org.nz/',
+		image: 'mary-potter-hospice.svg'
+	},
+	{
+		name: 'Craig & Gails Café (opening soon)',
+		url: 'https://wellingtoncitymission.org.nz/whakamaru/',
+		image: 'wellington-city-mission.svg'
+	},
+	{
+		name: 'Kimi Ora School',
+		url: 'https://kimiora.school.nz/',
+		image: 'kimi-ora-school.png'
+	}
+];
+
+export const greenSeatVenues = [
+	{
+		name: 'Redwood School - Cleaning and Maintenance',
+		url: 'http://www.redwood.school.nz/',
+		image: 'redwood-school.png'
+	},
+	{
+		name: 'Atura Hotel',
+		url: 'https://www.aturahotels.com/accommodation/new-zealand/wellington/',
+		image: 'atura-hotel.svg'
+	},
+	{
+		name: 'Oat Café',
+		url: 'https://oatcafe.co.nz',
+		image: 'oat-cafe.png'
+	},
+	{
+		name: 'Mary Potter Hospice',
+		url: 'https://marypotter.org.nz/',
+		image: 'mary-potter-hospice.svg'
+	},
+	{
+		name: 'Rydges Wellington',
+		url: 'https://www.rydges.com/accommodation/new-zealand/wellington-area/?ef_id=291f1f4e849a1c20b00b79c2e7235238:G:s&utm_source=bing&utm_medium=cpc&utm_campaign=B%20%7C%20Area%20%7C%20NZ%20%7C%20NI%20%7C%20Rydges%20Wellington-G981299746&utm_term=Rydges%20Wellington&utm_content=Rydges%20Wellington%20%7C%20Brand%20%7C%20BM',
+		image: 'rydges.svg'
 	}
 ];

@@ -19,7 +19,7 @@
 		>
 		<IconChevronDown
 			stroke={4}
-			class={`h-5 w-5 text-gray-700 transition ${$open ? '-rotate-180' : ''}`}
+			class={`h-5 w-5 text-gray-700 transition ${$open ? 'rotate-180' : ''}`}
 		/>
 	</button>
 

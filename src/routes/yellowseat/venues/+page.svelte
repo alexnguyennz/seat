@@ -5,15 +5,15 @@
 </script>
 
 <svelte:head>
-	<title>Partner venues - Yellow Seat</title>
-	<meta name="description" content="Partner Venues - Yellow Seat" />
+	<title>Venues - Yellow Seat</title>
+	<meta name="description" content="Venues - Yellow Seat" />
 </svelte:head>
 
 <section>
 	<div>
-		<h2 class="page-heading">Partner venues</h2>
+		<h2 class="page-heading">Venues</h2>
 
-		<div class="grid gap-8 md:grid-cols-2">
+		<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 			{#each yellowSeatVenues as venue}
 				<Venue data={venue} />
 			{/each}
