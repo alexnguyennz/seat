@@ -59,6 +59,11 @@ export const yellowSeatVenues = [
 		name: 'Kimi Ora School',
 		url: 'https://kimiora.school.nz/',
 		image: 'kimi-ora-school.png'
+	},
+	{
+		name: 'Laura Fergusson Trust',
+		url: 'https://lft.org.nz/',
+		image: 'lft.svg'
 	}
 ];
 
