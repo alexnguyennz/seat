@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Green Seat</title>
+	<title>Green Seat - The Seats</title>
 	<meta name="description" content="Green Seat" />
 
 	<link rel="preload" as="image" href="/greenseat.png" />

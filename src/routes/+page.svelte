@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Home - The Seats</title>
 	<meta name="description" content="Home - Seat" />
 
 	<link rel="preload" as="image" href="./blueseat-sm.png" />

@@ -27,7 +27,7 @@
 </script>
 
 <svelte:head>
-	<title>Contact</title>
+	<title>Contact - The Seats</title>
 	<meta name="description" content="Contact" />
 </svelte:head>
 
