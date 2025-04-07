@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-    <title>Venues - Green Seat</title>
+    <title>Green Seat Venues - The Seats</title>
     <meta name="description" content="Venues - Green Seat" />
 </svelte:head>
 

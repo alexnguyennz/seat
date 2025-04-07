@@ -26,7 +26,9 @@
 </script>
 
 <header class="mb-28">
-	<div class="mx-auto mt-3 flex items-center justify-between px-5 xl:container">
+	<img src="/the-seats.png" alt="The Seats" width="250" class="mx-auto sm:-mb-6" />
+
+	<div class="mx-auto flex items-center justify-between px-5 xl:container">
 		<div class="flex items-center gap-5">
 			<a href="/" aria-label="home page"><ChairLogo {pathname} /></a>
 

@@ -58,7 +58,7 @@
 	</div>
 
 	<div class="mt-8 text-center">
-		<span>&copy; {new Date().getFullYear()} Blue/Yellow/Orange/Green Seat</span>
+		<span>&copy; {new Date().getFullYear()} The Seats</span>
 	</div>
 </footer>
 

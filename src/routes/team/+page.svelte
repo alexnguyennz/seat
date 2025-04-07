@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Our team</title>
+	<title>Our team - The Seats</title>
 	<meta name="description" content="Our team" />
 
 	<link rel="preload" as="image" href="/team/clint-schoultz.png" />

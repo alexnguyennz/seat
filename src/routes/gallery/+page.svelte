@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Gallery</title>
+	<title>Gallery - The Seats</title>
 	<meta name="description" content="Gallery" />
 </svelte:head>
 
